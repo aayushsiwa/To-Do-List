@@ -41,7 +41,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    animation: text-color 2s ease-in-out infinite alternate;
+    animation: text-color 0.5s ease-in-out infinite alternate;
 }
 
 .spinner span{
@@ -60,22 +60,22 @@ body {
 }
 
 .spinner-sector-red {
-    border-top-color: lightcoral;
+    border-top-color: orangered;
     --duration: 1s;
     --timing: ease-out;
 }
 .spinner-sector-blue {
-    border-left-color: lightblue;
+    border-left-color: blue;
     --duration: 1.5s;
     --timing: ease-out;
 }
 .spinner-sector-green {
-    border-bottom-color: lightgreen;
+    border-bottom-color: greenyellow;
     --duration: 2s;
     --timing: ease-out;
 }
 .spinner-sector-yellow {
-    border-right-color: yellow;
+    border-right-color: goldenrod;
     --duration: 2.5s;
     --timing: ease-out;
 }
@@ -91,13 +91,13 @@ body {
 
 @keyframes text-color {
     0% {
-        color: rgb(0, 0, 0, 1);
+        color: rgb(255, 255, 255);
     }
     50% {
-        color: rgb(0, 0, 0, 0.5);
+        color: rgb(255, 255, 254);
     }
     100% {
-        color: rgb(0, 0, 0, 0.1);
+        color: rgb(255, 255, 253);
     }
 }
 
