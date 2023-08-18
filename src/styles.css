@@ -1,0 +1,255 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    /* color: hsl(200, 100%, 90%); */
+    color: goldenrod;
+    /* max-width: 400px; */
+    padding: 2rem;
+    /* margin: 10 auto; */
+}
+
+.alert {
+    color: white;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 5px;
+    opacity: 50%;
+    background-color: red;
+}
+
+.spinner {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: text-color 2s ease-in-out infinite alternate;
+}
+
+.spinner span{
+    color: white;
+}
+
+.spinner-sector {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid transparent;
+    mix-blend-mode: overlay;
+    animation: rotate var(--duration) var(--timing) infinite;
+    /* pointer-events: none; */
+}
+
+.spinner-sector-red {
+    border-top-color: lightcoral;
+    --duration: 1s;
+    --timing: ease-out;
+}
+.spinner-sector-blue {
+    border-left-color: lightblue;
+    --duration: 1.5s;
+    --timing: ease-out;
+}
+.spinner-sector-green {
+    border-bottom-color: lightgreen;
+    --duration: 2s;
+    --timing: ease-out;
+}
+.spinner-sector-yellow {
+    border-right-color: yellow;
+    --duration: 2.5s;
+    --timing: ease-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes text-color {
+    0% {
+        color: rgb(0, 0, 0, 1);
+    }
+    50% {
+        color: rgb(0, 0, 0, 0.5);
+    }
+    100% {
+        color: rgb(0, 0, 0, 0.1);
+    }
+}
+
+.new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    background: hsl(200, 100%, 50%, 0.1);
+    /* border: 1px solid hsl(200, 100%, 50%); */
+    border: 1px solid magenta;
+    color: wheat;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    /* background: hsl(200, 100%, 50%, 0.2); */
+    color: #111;
+    background: blue;
+    box-shadow: 0 0 5px magenta;
+}
+
+.btn.btn-danger {
+    background: hsl(0, 100%, 40%, 0.1);
+    border: 1px solid hsl(0, 100%, 40%);
+    color: hsl(0, 100%, 40%);
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+    background: hsl(0, 100%, 40%, 0.2);
+}
+
+.new-item-form input {
+    outline: none;
+    /* border: 1px solid hsl(200, 100%, 40%); */
+    border: 1px solid blue;
+    /* background: hsl(200, 100%, 30%); */
+    background: rgb(0, 9, 47);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    /* color: hsl(200, 100%, 90%); */
+    color: wheat;
+    height: 3rem;
+}
+
+.new-item-form input:focus {
+    border: 1px solid hsl(200, 100%, 70%);
+}
+
+.item {
+    font-size: large;
+    color: greenyellow;
+}
+
+.header {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    list-style: none;
+}
+
+.list li:has(input:checked) label {
+    /* color: hsl(200, 20%, 40%); */
+    color: dodgerblue;
+    text-decoration-color: white;
+    text-decoration-line: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.list li label {
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    align-items: center;
+    width: 90%;
+}
+
+.list li:has(input:focus-visible) label {
+    outline: 1px solid hsl(200, 100%, 50%);
+}
+
+.list li input {
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+    border-radius: 100%;
+}
+
+.list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(200, 100%, 90%);
+    /* border-radius: 0.25em; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list li label:hover::before {
+    /* background: hsl(200, 100%, 80%); */
+    background: orangered;
+    border-radius: 10px;
+}
+
+.list li:has(input:checked) label::before {
+    /* content: "✔"; */
+    /* background: hsl(200, 100%, 40%); */
+    background: orangered;
+    color: hsl(200, 100%, 90%);
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.list li:has(input:checked) label:hover::before {
+    /* background: hsl(200, 100%, 30%); */
+    background: orangered;
+}
