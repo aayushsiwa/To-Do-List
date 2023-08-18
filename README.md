@@ -14,13 +14,13 @@ A simple To-Do list application built using React that allows you to manage your
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-todo-list-app.git
+    git clone https://github.com/aayushsiwa/To-Do-List.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd your-todo-list-app
+    cd To-Do-List
     ```
 
 3. Install the dependencies:
@@ -52,9 +52,9 @@ A simple To-Do list application built using React that allows you to manage your
 -   react-dom: Provides DOM-specific methods to render React components.
 -   crypto: Node.js crypto module for generating random UUIDs.
 
-## Contributing
+## Authors
 
-Contributions are welcome! Feel free to open issues and submit pull requests.
+- [AayushSiwa](https://www.github.com/aayushsiwa)
 
 ## License
 
