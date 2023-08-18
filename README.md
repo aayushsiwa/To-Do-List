@@ -4,7 +4,7 @@ A simple To-Do list application built using React that allows you to manage your
 
 ## Demo
 
-You can see a live demo of the BookList Web Application [here](https://to-do-list-hs.web.app).
+You can see a live demo of the To-Do List Web Application [here](https://to-do-list-hs.web.app).
 
 ## Features
 
